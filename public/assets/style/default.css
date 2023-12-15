@@ -1,0 +1,107 @@
+:root {
+    --ai-blue-500: #132DE8;
+    --ai-blue-800: #020F6F;
+    --ai-blue-900: #010731;
+    --Neutral-100: #F7F7F9;
+    --Neutral-200: #D9DAE1;
+    --Neutral-300: #999AA4;
+    --Neutral-500: #353746;
+    --Neutral-600: #272B42;
+    --Neutral-700: #111528;
+    --Neutral-800: #060918;
+    --Neutral-900: #00020D;
+
+    --wrapper-width: 1440px
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+*[class*="__wrapper"] {
+    max-width: var(--wrapper-width);
+    margin-inline: auto;
+    padding-inline: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+button {
+    font-family: "Graphik Trial";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 72px;
+    text-transform: uppercase;
+    color: var(--Neutral-100);
+}
+
+button {
+    padding: 12px 20px;
+    border-radius: 40px;
+    background: var(--ai-blue-500);
+    cursor: pointer;
+    transition: all .2s;
+}
+
+button:hover {
+    background: var(--Neutral-100);
+    color: var(--ai-blue-500);
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+h4 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+h5 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+button {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+p,
+span,
+ul,
+ol,
+li,
+a {
+    font-family: "Graphik Trial";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    list-style: none;
+    color: var(--Neutral-300);
+}
+
+.radial-bg {
+    background: radial-gradient(at 60% 100%, var(--ai-blue-800) 0%, var(--Neutral-900) 30%);
+}
