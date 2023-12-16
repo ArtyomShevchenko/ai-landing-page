@@ -1,0 +1,68 @@
+.how-it-works {}
+
+.how-it-works__container {}
+
+.how-it-works__wrapper {}
+
+.how-it-works__content {}
+
+.how-it-works__body {
+    max-width: 596px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-inline: auto;
+    text-align: center;
+    align-items: center;
+}
+
+.how-it-works__title {}
+
+.how-it-works__text {}
+
+.how-it-works__button {}
+
+.how-it-works__button--active {
+    background-color: var(--Neutral-100);
+    color: var(--ai-blue-500);
+}
+
+.how-it-works__demo-container {
+    max-width: 968px;
+    width: 100%;
+    max-height: 512px;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+    margin: 35px auto;
+    border-radius: 8px;
+
+
+    /* background: linear-gradient(white 15%, red 85%); */
+    background-color: blue;
+}
+
+.how-it-works__demo {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.how-it-works__demo-container>svg {
+    width: fit-content;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: filter .2s;
+}
+
+.how-it-works__demo-container:hover svg {
+    filter: brightness(1.5)
+}

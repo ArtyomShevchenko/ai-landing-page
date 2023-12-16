@@ -1,14 +1,11 @@
 .hero {}
 
-.hero__container {
-    position: relative;
-
-}
+.hero__container {}
 
 .hero__wrapper {}
 
 .hero__content {
-    height: 657px;
+    height: 537px;
 }
 
 .swiper {
@@ -71,10 +68,17 @@
     background-color: var(--Neutral-900);
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 
 .hero__bg-image {
     height: 100%;
     opacity: .2;
     filter: blur(.5rem);
+}
+
+@media(max-width: 768px) {
+    .hero__content {
+        height: 100vh;
+    }
 }
