@@ -2,6 +2,10 @@
 
 .how-it-works__container {}
 
+.how-it-works__container--gradient {
+    background: radial-gradient(at 50% 75%, var(--ai-blue-800) 0%, var(--Neutral-900) 35%);
+}
+
 .how-it-works__wrapper {}
 
 .how-it-works__content {}
@@ -41,12 +45,16 @@
 }
 
 .how-it-works__demo {
-    width: 100%;
+    /* width: 100%;
     position: absolute;
     inset: 0;
     z-index: -1;
     margin: auto;
-    opacity: .7;
+    opacity: .7; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .how-it-works__demo-container>svg {

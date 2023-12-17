@@ -1,0 +1,29 @@
+.registration {}
+
+.registration__container {
+    background-color: red;
+}
+
+.registration__wrapper {}
+
+.registration__content {}
+
+.registration__body {}
+
+.registration__title {}
+
+.registration__text {}
+
+.registration__form-container {}
+
+.registration__form-title {}
+
+.registration__form {}
+
+.registration__form-name {}
+
+.registration__form-email {}
+
+.registration__form-text {}
+
+.registration__form-button {}
