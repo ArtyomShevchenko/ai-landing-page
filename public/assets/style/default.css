@@ -34,6 +34,10 @@
     padding-inline: 2rem;
 }
 
+*[class*="--gradient"] {
+    background: radial-gradient(at 50% 75%, var(--ai-blue-800) 0%, var(--Neutral-900) 35%);
+}
+
 body {
     background: var(--Neutral-900);
 }
@@ -106,8 +110,31 @@ a {
     color: var(--Neutral-300);
 }
 
-.radial-bg {
-    background: radial-gradient(at 60% 100%, var(--ai-blue-800) 0%, var(--Neutral-900) 30%);
+input,
+textarea {
+    width: 100%;
+    padding: 14px 16px;
+    background-color: var(--Neutral-600);
+    color: var(--Neutral-100);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.textarea {
+    min-height: 153px;
+    height: 100%;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--Neutral-300);
+    font-family: "Graphik Trial";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
 }
 
 @media(max-width: 768px) {

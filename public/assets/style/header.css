@@ -103,6 +103,10 @@ header {}
     text-transform: uppercase;
 }
 
+.radial-bg {
+    background: radial-gradient(at 60% 100%, var(--ai-blue-800) 0%, var(--Neutral-900) 30%);
+}
+
 @media(max-width: 550px) {
     .menu__links-container {
         padding-top: 50px;
