@@ -1,33 +1,40 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// import html from "./file.html";
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    // development mode - show comment, a file is not compressed
-    // mode: "development",
-
-    // mode production - default mode, delete all comment, a file compressed
     mode: "production",
-    entry: [path.resolve(__dirname, "src", "index.js"), path.resolve(__dirname, "public", "assets", "style", "default.css")],
+    // mode: "production",
+    // mode: "development",
+    entry: [
+        path.resolve("@babel/polyfill", __dirname, "src", "index.js"),
+    ],
     output: {
-        // name generate from content hash, [name] - default: main
+        // навза для індекс.нтмл генеруєтся за допомогою HtmlWebpackPlugin
         filename: '[name].[contenthash].js',
+        // сбірка в папку діст
         path: path.resolve(__dirname, 'dist'),
+        // чистка непотрібних файлів
         clean: true,
-        // assetModuleFilename: 'assets/images/[name][ext]'
+        // шрифти, картинки ... додаются в папку асетс з генерацією
+        assetModuleFilename: "assets/[name][ext]"
     },
     plugins: [
-        new HtmlWebpackPlugin({ template: path.resolve(__dirname, "public", 'index.html') })
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "public", 'index.html')
+        }),
+        // сбірка стилів в файл генерований хешем
+        new MiniCssExtractPlugin({
+            filename: '[name].[contenthash].css',
+        })
     ],
 
     devServer: {
-        // static: {
-        //     directory: path.join(__dirname, 'public'),
-        // },
-        compress: true,
+        // compress: true,
         port: 9000,
         open: true,
-        hot: true,
+        // якщо стили багають - hot: true remove
+        // hot: true,
     },
 
     // збільшуе ліміт 244кб
@@ -37,13 +44,44 @@ module.exports = {
         maxAssetSize: 504000
     },
 
-    // для роботи стилів css
     module: {
         rules: [
-            { test: /\.css$/i, use: ["style-loader", "css-loader"] },
-            { test: /\.(jpg|png)$/, use: { loader: 'url-loadxer' } },
-            // // work <ing src>
-            // { test: /\.html$/i, loader: "html-loader" },
+            {
+                test: /\.html$/i,
+                loader: "html-loader"
+            },
+            {
+                test: /\.css$/i,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            postcssOptions: {
+                                plugins: ["postcss-preset-env"],
+                            },
+                        },
+                    }
+                ],
+            },
+            // працює тількі при сборке в /dist, dev-server - не підтягує стилі
+            // {
+            //     test: /\.css$/i,
+            //     use: [MiniCssExtractPlugin.loader, "css-loader"],
+            // },
+            {
+                test: /\.(?:js|mjs|cjs)$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            ['@babel/preset-env', { targets: "defaults" }]
+                        ]
+                    }
+                }
+            },
         ]
-    }
+    },
 };

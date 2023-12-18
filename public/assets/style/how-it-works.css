@@ -62,7 +62,7 @@
     margin: auto;
 }
 
-.how-it-works__demo-container>svg {
+.how-it-works__demo-button {
     width: fit-content;
     position: absolute;
     inset: 0;
@@ -73,6 +73,6 @@
     transition: filter .2s;
 }
 
-.how-it-works__demo-container:hover svg {
+.how-it-works__demo-container:hover>.how-it-works__demo-button {
     filter: brightness(1.5)
 }

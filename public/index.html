@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Landing Page</title>
+    <link rel="shortcut icon" href="./assets/images/icon.ico" type="image/x-icon">
+
 </head>
 
 <body>
-    <div class="root">
+    <div class="body-container">
         <header>
             <div class="header__container">
                 <div class="header__wrapper">
@@ -42,27 +44,21 @@
                             <div class="menu__links-container radial-bg " id="menuList">
                                 <ul class="menu__links links__wrapper">
                                     <li class="menu__link menu__link-cross" id="menuCloseBtn">
-                                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
-                                            viewBox="0 0 50 50" fill="none">
-                                            <path
-                                                d="M50 43.5636L31.3977 24.9568L50 6.37955L43.5636 0L24.9682 18.5886L6.38636 0L0 6.38636L18.6045 25.0136L0 43.6136L6.38636 50L25.0295 31.3818L43.6205 50L50 43.5636Z"
-                                                fill="#D9DAE1" />
-                                        </svg> -->
                                     </li>
                                     <li class="menu__link">
-                                        <a href="#" class="menu__link-item">Product</a>
+                                        <a href="#product" class="menu__link-item">Product</a>
                                     </li>
                                     <li class="menu__link">
-                                        <a href="#" class="menu__link-item">Features</a>
+                                        <a href="#features" class="menu__link-item">Features</a>
                                     </li>
                                     <li class="menu__link">
-                                        <a href="#" class="menu__link-item">How it works</a>
+                                        <a href="#howItWorks" class="menu__link-item">How it works</a>
                                     </li>
                                     <li class="menu__link">
-                                        <a href="#" class="menu__link-item">Team</a>
+                                        <a href="#team" class="menu__link-item">Team</a>
                                     </li>
                                     <li class="menu__link">
-                                        <a href="#" class="menu__link-item">Book a Demo</a>
+                                        <a href="#howItWorks" class="menu__link-item">Book a Demo</a>
                                     </li>
                                 </ul>
                             </div>
@@ -73,7 +69,7 @@
         </header>
 
         <main>
-            <section class="hero">
+            <section class="hero" id="product">
                 <div class="hero__container">
                     <div class="hero__wrapper">
                         <div class="hero__content">
@@ -157,26 +153,26 @@
                 </div>
             </section>
 
-            <section class="features">
+            <section class="features" id="features">
                 <div class="features__container">
                     <div class="features__wrapper">
                         <div class="features__content">
-                            <div class="features__card">
+                            <div class="features__card slide-bottom--hidden">
                                 <h4 class="features__card-title">Lightning Speed</h4>
                                 <p class="features__card-text">sit amet consectetur. Arcu pulvinar vel felis ac sapien
                                     id duis sodales rhoncus. Quisque morbi adipiscing</p>
                             </div>
-                            <div class="features__card">
+                            <div class="features__card slide-bottom--hidden">
                                 <h4 class="features__card-title">100% Efficiency</h4>
                                 <p class="features__card-text">sit amet consectetur. Arcu pulvinar vel felis ac sapien
                                     id duis sodales rhoncus. Quisque morbi adipiscing</p>
                             </div>
-                            <div class="features__card">
+                            <div class="features__card slide-bottom--hidden">
                                 <h4 class="features__card-title">Tested Accuracy</h4>
                                 <p class="features__card-text">sit amet consectetur. Arcu pulvinar vel felis ac sapien
                                     id duis sodales rhoncus. Quisque morbi adipiscing</p>
                             </div>
-                            <div class="features__card">
+                            <div class="features__card slide-bottom--hidden">
                                 <h4 class="features__card-title">Industry reviewed</h4>
                                 <p class="features__card-text">sit amet consectetur. Arcu pulvinar vel felis ac sapien
                                     id duis sodales rhoncus. Quisque morbi adipiscing</p>
@@ -186,7 +182,7 @@
                 </div>
             </section>
 
-            <section class="how-it-works">
+            <section class="how-it-works" id="howItWorks">
                 <div class="how-it-works__container how-it-works__container--gradient">
                     <div class="how-it-works__wrapper">
                         <div class="how-it-works__content">
@@ -205,10 +201,12 @@
                                 </button>
                             </div>
                             <div class="how-it-works__demo-container" id="demoContainer">
-                                <img class="how-it-works__demo" id="demoImage" src="./assets/images/demo.png"
-                                    alt="Demo">
-                                <svg width="120" height="120" viewBox="0 0 120 120" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                                <img class="how-it-works__demo how-it-works__demo-img" src="./assets/images/demo.png"
+                                    alt="Demo image">
+                                <img class="how-it-works__demo how-it-works__demo-animation"
+                                    src="./assets/images/demo.gif" alt="Demo animation">
+                                <svg class="how-it-works__demo-button" width="120" height="120" viewBox="0 0 120 120"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="2.5" y="2.5" width="115" height="115" rx="57.5" stroke="#AEB8FF"
                                         stroke-width="5" />
                                     <g opacity="0.8">
@@ -224,26 +222,26 @@
                 </div>
             </section>
 
-            <section class="team">
+            <section class="team" id="team">
                 <div class="team__container">
                     <div class="team__wrapper">
                         <div class="team__content">
-                            <div class="team__card">
+                            <div class="team__card slide-bottom--hidden">
                                 <img src="./assets/images/team-1.jpg" alt="Person" class="team__card-img">
                                 <p class="team__card-title">John Doe</p>
                                 <p class="team__card-subtitle">Head of AI tech</p>
                             </div>
-                            <div class="team__card">
+                            <div class="team__card slide-bottom--hidden">
                                 <img src="./assets/images/team-2.jpg" alt="Person" class="team__card-img">
                                 <p class="team__card-title">Maria Jose</p>
                                 <p class="team__card-subtitle">CEO and CO founder</p>
                             </div>
-                            <div class="team__card">
+                            <div class="team__card slide-bottom--hidden">
                                 <img src="./assets/images/team-3.jpg" alt="Person" class="team__card-img">
                                 <p class="team__card-title">Sienna Bud</p>
                                 <p class="team__card-subtitle">CEO and CO founder</p>
                             </div>
-                            <div class="team__card">
+                            <div class="team__card slide-bottom--hidden">
                                 <img src="./assets/images/team-4.jpg" alt="Person" class="team__card-img">
                                 <p class="team__card-title">Elvis Presly</p>
                                 <p class="team__card-subtitle">CTO/p>
@@ -253,7 +251,7 @@
                 </div>
             </section>
 
-            <section class="registration">
+            <section class="registration" id="registration">
                 <div class="registration__container registration__container--gradient">
                     <div class="registration__wrapper">
                         <div class="registration__content">
@@ -307,8 +305,8 @@
 
                         <div class="footer__nav-container">
                             <a href="#" class="footer__nav-link">Privacy</a>
-                            <a href="#" class="footer__nav-link">Contact</a>
-                            <a href="#" class="footer__nav-link">Request Demo</a>
+                            <a href="#registration" class="footer__nav-link">Contact</a>
+                            <a href="#howItWorks" class="footer__nav-link">Request Demo</a>
                         </div>
 
                         <div class="footer__social-container">

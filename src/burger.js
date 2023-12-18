@@ -7,7 +7,9 @@ burgerIcon.addEventListener("click", () => {
     document.body.style.overflow = "hidden"
 })
 
-menuCloseBtn.addEventListener("click", () => {
-    menuList.classList.toggle("--menu-visible")
-    document.body.style.overflow = "visible"
+document.querySelectorAll(".menu__link").forEach(link => {
+    link.addEventListener("click", () => {
+        menuList.classList.toggle("--menu-visible")
+        document.body.style.overflow = "visible"
+    })
 })

@@ -63,4 +63,8 @@
     .footer__social-container {
         justify-self: end;
     }
+
+    .footer__nav-link {
+        text-align: center;
+    }
 }
