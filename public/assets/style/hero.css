@@ -60,7 +60,7 @@
 
 .hero__card-btn {}
 
-.hero__bg-image-container {
+.hero__video-container {
     position: absolute;
     width: 100%;
     z-index: -1;
@@ -71,7 +71,7 @@
     overflow: hidden;
 }
 
-.hero__bg-image {
+.hero__video {
     height: 100%;
     opacity: .2;
     filter: blur(.5rem);

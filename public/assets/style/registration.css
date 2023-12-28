@@ -44,6 +44,10 @@
     align-items: flex-start;
 }
 
+.registration__form--hidden {
+    display: none;
+}
+
 .registration__form-title {}
 
 
@@ -54,6 +58,34 @@
 .registration__form-text {}
 
 .registration__form-button {}
+
+.registration__form-button:disabled {
+    background-color: lightgray;
+    cursor: auto;
+    color: #fff;
+}
+
+.registration__form-button:disabled:hover {
+    background-color: lightgray;
+    color: #fff;
+}
+
+.registration__form-response {
+    display: none;
+}
+
+.registration__form-response-title {
+    border-bottom: 2px solid greenyellow;
+}
+
+.registration__form-response--visible {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+
+.--button-active {}
 
 @media (max-width: 900px) {
     .registration__content {

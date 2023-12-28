@@ -10,15 +10,15 @@ export const swiper = new Swiper('.swiper', {
         el: '.swiper-pagination',
         clickable: true,
     },
-    // navigation: {
-    //     nextEl: '.swiper-button-next',
-    //     prevEl: '.swiper-button-prev',
-    // },
-    // scrollbar: {
-    //     el: '.swiper-scrollbar',
-    // },
     autoplay: {
         delay: 5000,
         disableOnInteraction: false,
+    },
+    allowTouchMove: false,
+    breakpoints: {
+        // when window width is >= 768px
+        768: {
+            allowTouchMove: true,
+        },
     },
 });

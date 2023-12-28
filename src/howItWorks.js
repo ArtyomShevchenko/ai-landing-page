@@ -1,35 +1,20 @@
-const demoBtn = document.getElementById("demoBtn")
-const demoContainer = document.getElementById("demoContainer")
-const img = demoContainer.querySelector(".how-it-works__demo-img")
-const animation = demoContainer.querySelector(".how-it-works__demo-animation")
+const howItWorksVideoContainer = document.querySelector("#howItWorksVideoContainer");
+const howItWorksVideo = document.querySelector("#howItWorksVideo");
+const demoBtn = document.getElementById("demoBtn");
+const innerButton = document.querySelector(".how-it-works__demo-button");
 
-img.style.display = "block"
-animation.style.display = "none"
 
-demoContainer.addEventListener("click", (e) => {
-    if (img.style.display === "block") {
-        img.style.display = "none";
-        animation.style.display = "block";
+function startVideo() {
+    if (howItWorksVideo.paused) {
+        howItWorksVideo.play()
         demoBtn.classList.add("how-it-works__button--active")
-        e.target.querySelector(".how-it-works__demo-button").style.display = "none"
+        innerButton.classList.add("how-it-works__demo-button--hidden")
     } else {
-        img.style.display = "block";
-        animation.style.display = "none";
+        howItWorksVideo.pause()
         demoBtn.classList.remove("how-it-works__button--active")
-        e.target.querySelector(".how-it-works__demo-button").style.display = "block"
+        innerButton.classList.remove("how-it-works__demo-button--hidden")
     }
-});
+}
 
-demoBtn.addEventListener("click", () => {
-    if (img.style.display === "block") {
-        img.style.display = "none";
-        animation.style.display = "block";
-        demoBtn.classList.add("how-it-works__button--active")
-        demoContainer.querySelector(".how-it-works__demo-button").style.display = "none"
-    } else {
-        img.style.display = "block";
-        animation.style.display = "none";
-        demoBtn.classList.remove("how-it-works__button--active")
-        demoContainer.querySelector(".how-it-works__demo-button").style.display = "block"
-    }
-});
+howItWorksVideoContainer.addEventListener("click", startVideo)
+demoBtn.addEventListener("click", startVideo);

@@ -13,3 +13,5 @@ import "./burger.js";
 import { swiper } from "./swiper.js";
 import "./howItWorks.js";
 import "./observer.js"
+import "./emailjs.js"
+import "./registration.js"
