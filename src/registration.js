@@ -16,18 +16,18 @@ registrationForm.addEventListener("submit", (e) => {
         TEMPLATE_ID = "template_o6ntpge",
         PUBLIC_KEY = "bqsQKTfwvEeaDOIsZ"
 
-    // emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, registrationForm, PUBLIC_KEY)
-    //     .then((res) => {
-    //         if (res.text === "OK") {
-    //             registrationFormResponse.classList.add("registration__form-response--visible");
-    //             registrationForm.classList.add("registration__form--hidden")
-    //         }
-    //         console.log("Message send succsesful")
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, registrationForm, PUBLIC_KEY)
+        .then((res) => {
+            if (res.text === "OK") {
+                registrationFormResponse.classList.add("registration__form-response--visible");
+                registrationForm.classList.add("registration__form--hidden")
+            }
+            console.log("Message send succsesful")
 
-    //     })
-    //     .catch(err => {
-    //         console.error(err)
-    //     })
+        })
+        .catch(err => {
+            console.error(err)
+        })
 })
 
 function validationForm() {
