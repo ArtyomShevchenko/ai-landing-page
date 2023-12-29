@@ -49,24 +49,8 @@
 @media (max-width: 1100px) {
     .team__content {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
-    }
-
-    .team__card:last-child {
-        grid-column: span 3;
-    }
-}
-
-@media (max-width: 800px) {
-    .team__content {
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 24px;
-    }
-
-    .team__card:last-child {
-        grid-column: auto;
     }
 }
 
